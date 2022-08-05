@@ -1,0 +1,19 @@
+name: preview
+
+on:
+  workflow_dispatch
+
+jobs:
+  preview:
+    name: Deploy for QA
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Install dependencies
+        uses: php-actions/composer@v6
+        with:
+          command: global require ryangjchandler/forge-previewer
+
+      - name: Deploy
+        run: deploy
