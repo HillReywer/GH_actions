@@ -16,4 +16,4 @@ jobs:
           command: global require ryangjchandler/forge-previewer
 
       - name: Deploy
-        run: deploy
+        run: composer global show -i | grep 'forge' && deploy
