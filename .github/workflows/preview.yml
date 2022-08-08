@@ -13,7 +13,7 @@ jobs:
       - name: Install dependencies
         uses: php-actions/composer@v6
         with:
-          command: | 
-                  global require ryangjchandler/forge-previewer
-                  ./vendor/ryangjchandler/forge-previewer/forge-previewer deploy
-              
+          command: global require ryangjchandler/forge-previewer
+      - name: whereis composer
+        run: whereis composer
+        
