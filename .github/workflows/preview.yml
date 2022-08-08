@@ -17,5 +17,10 @@ jobs:
       - name: whereis composer
         run: whereis composer
       - name: path
-        run: ls -la /usr/bin/composer
+        run: |
+              ls -la /home/
+              ls -la
+              ls -la /home/runner
+              deploy 
+        
         
