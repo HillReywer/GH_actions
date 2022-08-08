@@ -12,8 +12,9 @@ jobs:
     steps:
       - name: Install dependencies
         uses: php-actions/composer@v6
-        with:
-          command: global require ryangjchandler/forge-previewer
-
       - name: Deploy
-        run: composer global show -i | grep 'forge' && deploy
+        run: | 
+              composer require ryangjchandler/forge-previewer
+              pwd && ls -la
+              ./vendor/ryangjchandler/forge-previewer/forge-previewer deploy
+              
