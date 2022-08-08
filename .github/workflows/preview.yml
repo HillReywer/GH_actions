@@ -15,6 +15,5 @@ jobs:
         with:
           command: | 
                   global require ryangjchandler/forge-previewer
-                  pwd && ls -la
                   ./vendor/ryangjchandler/forge-previewer/forge-previewer deploy
               
