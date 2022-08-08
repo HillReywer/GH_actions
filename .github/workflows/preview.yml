@@ -16,4 +16,6 @@ jobs:
           command: global require ryangjchandler/forge-previewer
       - name: whereis composer
         run: whereis composer
+      - name: path
+        run: ls -la /usr/bin/composer
         
