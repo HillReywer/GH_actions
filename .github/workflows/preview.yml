@@ -17,8 +17,8 @@ jobs:
         with:
           command: composer -V
       - name: Test
-        working-directory: test
+      #  working-directory: test
         run: composer require ryangjchandler/forge-previewer
       - name: Deploy
-        working-directory: test
+      #  working-directory: test
         run: ./vendor/ryangjchandler/forge-previewer/forge-previewer deploy 
