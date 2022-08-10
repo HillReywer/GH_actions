@@ -19,5 +19,6 @@ jobs:
       - name: Test
         working-directory: test
         run: composer require ryangjchandler/forge-previewer
-      - name: Deploy 
+      - name: Deploy
+        working-directory: test
         run: ls -la && deploy
