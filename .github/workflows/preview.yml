@@ -18,6 +18,6 @@ jobs:
           command: composer -V
       - name: Test
         working-directory: test
-        run: composer global require ryangjchandler/forge-previewer
+        run: composer require ryangjchandler/forge-previewer
       - name: Deploy 
         run: ls -la && deploy
