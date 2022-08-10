@@ -18,6 +18,6 @@ jobs:
           command: global require ryangjchandler/forge-previewer
 
       - name: Test
-        run: pwd && ls -la
+        run: pwd && ls -la && composer -V
       - name: Deploy 
         run: deploy
