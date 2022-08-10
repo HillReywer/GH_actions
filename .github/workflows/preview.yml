@@ -15,9 +15,8 @@ jobs:
       - name: Install dependencies
         uses: actions/checkout@v2
         with:
-          command: global require ryangjchandler/forge-previewer
-
+          command: composer -V
       - name: Test
-        run: pwd && ls -la && composer -V
+        run: composer global require ryangjchandler/forge-previewer
       - name: Deploy 
-        run: deploy
+        run: ls -la && deploy
