@@ -21,4 +21,4 @@ jobs:
         run: composer require ryangjchandler/forge-previewer
       - name: Deploy
         working-directory: test
-        run: ls -la && deploy
+        run: ./vendor/ryangjchandler/forge-previewer/forge-previewer deploy 
