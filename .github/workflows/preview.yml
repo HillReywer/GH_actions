@@ -1,7 +1,9 @@
 name: preview
 
 on:
-  workflow_dispatch
+  push:
+    branches:
+      - feature/**
 
 jobs:
   preview:
@@ -11,16 +13,11 @@ jobs:
 
     steps:
       - name: Install dependencies
-        uses: php-actions/composer@v6
+        uses: actions/checkout@v2
         with:
           command: global require ryangjchandler/forge-previewer
-      - name: whereis composer
-        run: whereis composer
-      - name: path
-        run: |
-              ls -la /home/
-              ls -la
-              ls -la /home/runner/.composer/
-              deploy 
-        
-        
+
+      - name: Test
+        run: pwd && ls -la
+      - name: Deploy 
+        run: deploy
